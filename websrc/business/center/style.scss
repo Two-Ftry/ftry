@@ -1,0 +1,74 @@
+@import "../../common/css/border";
+$color1: yellow;
+
+.index-top{
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+}
+.index-top p{
+  float: left;
+}
+.index-top a{
+  float: right;
+}
+.b-img{
+  margin-left: 20px;
+  width: 200px;
+  margin-top: 80px;
+}
+.icon-box li{
+  float: left;
+  padding: 20px;
+  font-size: 32px;
+}
+.orange{
+  color: orange;
+}
+.border-red{
+  border-color: red !important;
+}
+.img-scale{
+  transform: scale(1.5);
+}
+.tx{
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  overflow: hidden;
+  border: 1px solid yellow;
+  background: url('../../images/bf1554.jpg') top left no-repeat;
+  // border-radius: 50%;
+  @include border-radius(50%);
+}
+.tx img, .avart-img{
+  width: 40px;
+  height: 40px;
+  @include border-radius(50%);
+}
+.index-mt{
+  margin-top: 20px;
+}
+.c-box{
+  color: $color1;
+  .c-item1{
+    display: block;
+    font-size: 24px;
+    color: green;
+  }
+  .c-item2{
+    font-size: 38px;
+  }
+  .c-item3{
+    font-size: 48px;
+  }
+  .c-item4{
+    font-size: 48px;
+  }
+  .c-item5{
+    font-size: 48px;
+  }
+}
+// .test{
+//   @include test-data();
+// }
