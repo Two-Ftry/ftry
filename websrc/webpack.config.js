@@ -48,7 +48,7 @@ var webpackConfig = {
   cache: true,
   resolve: {
     root: path.resolve('./'),
-    extensions: ['', '.js', '.css', '.scss', '.sass', '.less']
+    extensions: ['', '.js', '.css', '.scss', '.sass', '.less', '.vue']
   },
   module:{
     loaders: [
@@ -78,12 +78,17 @@ var webpackConfig = {
         test: /\.(jpg|jpeg|png|gif)$/,
         exclude: nodeModulesPath,
         loader: 'file-loader?name=[path][name]-[hash:6].[ext]'
+        // loader: 'file-loader?name=[path][name]-[hash:6].[ext]'
       },
       {
         test: /\.(eot|svg|ttf|woff)/,
         exclude: nodeModulesPath,
         // loader: 'url-loader'
         loader: 'file-loader?name=[path][name]-[hash:6].[ext]'
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       }
       // ,
       // {//不起作用 TODO 自写pie.htc-loader
