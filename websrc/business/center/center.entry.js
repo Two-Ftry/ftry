@@ -1,4 +1,7 @@
 
+import Vue from 'vue';
+import App from './components/App.vue';
+
 require('./style');
 
 var _class = {
@@ -12,10 +15,23 @@ var _class = {
 };
 
 var _isClick = false;
+var app = null;
 
 function init(){
   var dom = require('./template.html');
   $('#main').replaceWith(dom);
+
+  var _app = Vue.extend(App);
+  app = new _app({
+    el: '#app',
+    data: {
+      message: 'xxxx'
+    },
+    components:{
+      App
+    }
+  });
+
   initEvent();
 }
 
