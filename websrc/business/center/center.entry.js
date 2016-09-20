@@ -11,7 +11,8 @@ var _class = {
   scale: 'img-scale',
   tx: 'ev-tx',
   mt: 'index-mt',
-  borderRed: 'border-red'
+  borderRed: 'border-red',
+  btn: 'index-btn'
 };
 
 var _isClick = false;
@@ -73,6 +74,24 @@ function initEvent(){
     }else{
       $('.' + _class.tx).removeClass(_class.borderRed);
     }
+  });
+
+  $('.' + _class.btn).click(function(){
+    $.ajax({
+      url: 'http://localhost:3000/login',
+      type: 'get',
+      dataType: 'json',
+      data: {
+        a1: 111,
+        a2: 222
+      },
+      success: function (data) {
+        console.log('success', data);
+      },
+      error: function(error){
+        console.log('error', error);
+      }
+    });
   });
 }
 

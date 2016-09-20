@@ -27,6 +27,7 @@
     <span class="c-item5" @click="onToShowPanel">5</span>
   </div>
 
+  <button class="index-btn">发送请求</button>
 </div>
   <panel v-show="isPanelShow" @event-close-panel="onToClosePanel"></panel>
 
