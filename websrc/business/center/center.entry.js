@@ -79,7 +79,7 @@ function initEvent(){
   $('.' + _class.btn).click(function(){
     $.ajax({
       url: 'http://localhost:3000/login',
-      type: 'get',
+      type: 'post',
       dataType: 'json',
       data: {
         a1: 111,
